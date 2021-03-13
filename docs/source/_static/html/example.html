@@ -1,0 +1,26 @@
+<div class="termynal" data-termynal data-ty-lineDelay="10">
+    <span data-ty=input>kubectl get pods -o json</span>
+</div>
+<details>
+    <summary>Sample Output</summary>
+    <pre class="json-data" data-name="success" style="color: green"></pre>
+</details>
+<details>
+    <summary>Additional Output</summary>
+    <pre class="json-data" data-name="failure" style="color: red"></pre>
+</details>
+
+<script>var success =
+    {
+        "apiVersion": "v1",
+        "items": [],
+        "kind": "List",
+        "metadata": {
+            "resourceVersion": "",
+            "selfLink": ""
+        }
+    };
+    var failure = {
+        "error": "Failure"
+    }
+</script>
