@@ -8,15 +8,11 @@ Installation
 
 To run these examples locally, first install the project dependencies:
 
-```shell
-poetry install
-```
+``poetry install``
 
 Then build the documentation using the make target:
 
-```shell
-make docs
-```
+``make docs``
 
 The documentation will be built in `docs/built/html/`. You can open the
 `index.html` for for a rendering of what the site's landing page will look like. 
@@ -31,10 +27,14 @@ What gets shown off:
 * Dark mode and light mode
 * Adds copy button to code snippets
 * Termynal text animations
+  
   * Animations can be restarted
   * Animations only start when the user can see them
+
 * Displays collapsible content
+  
   * Useful for displaying JSON data
+
 * Displays tabbed content
 * Displays different types of admonitions (notes)
 * Renders an OpenAPI spec
