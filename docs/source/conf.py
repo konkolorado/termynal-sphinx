@@ -29,7 +29,6 @@ author = "konkolorado"
 # ones.
 extensions = [
     "sphinx.ext.autodoc",
-    "sphinxcontrib.redoc",
     "sphinx_copybutton",
     "sphinxcontrib.openapi",
     "sphinx_inline_tabs",

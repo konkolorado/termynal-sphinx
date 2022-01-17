@@ -3,34 +3,22 @@ termynal-sphinx
 ***************
 
 Welcome! This is a demo project showing some features that can be pulled into
-ReadTheDocs site. 
+a ReadTheDocs site using the `furo` theme. Notice that the link to the porject's
+GitHub repository is explicitly added in the toctree.
 
-What gets shown off:
+Copy-able code
+==============
 
-* The Furo sphinx theme
-* Dark mode and light mode
-* Termynal text animations
+All code snippets in the examples below will have a copy button on the top right
+corner which lets reader click to copy the entire contents in the block. The
+functionality is provided by `sphinx-copybutton`. 
 
-  * Animations can be restarted
-  * Animations only start when the user can see them
+Code highlighting
+=================
 
-* Supports hidable content
-
-  * Useful for displaying JSON data
-
-* Displays tabbed content
-* Displays different types of admonitions aka notes
-* Hidden toctree
-* External link to GitHub
-* Renders an OpenAPI spec
-* Adds copy button to code samples
-* Adds custom site logo + html title
-
-Content
-=======
-
-The highlighting on this code snippet will change depending on if the
-browser has night mode active. Also, you can click to copy the code:
+Furo supports day and night mode which carries onto the highlighting for code
+snippets. The syntax highlighting on the code snippet below will change
+depending on if the browser has night mode active.
 
 .. code:: python
    
@@ -39,13 +27,33 @@ browser has night mode active. Also, you can click to copy the code:
 
    print("All done")
 
+Terminal animations
+===================
+
 This animation will begin immediately, and when complete, will allow the user to
-restart the animation:
+restart the animation. This uses an implementation of the termynal JS library
+which gets loaded in the project's `conf.py` file.
 
 .. raw:: html
    :file: _static/html/example.html
 
-|
+
+Collapsible content
+===================
+
+Example input and output can be too long to comfortably display on a webpage.
+This technique allows long content to render using HTML's `details` tag. There's
+custom JS that get's loaded and replaces the HTML content by it's data-name
+attribute with content stored in a variable of the same name.
+
+.. raw:: html
+   :file: _static/html/collapsible.html
+
+
+Tabbed content
+==============
+
+Display alternate content in tabs using the `sphinx-inline-tabs` extension.
 
 .. tab:: Bash
 
@@ -58,6 +66,11 @@ restart the animation:
    .. code:: bash
 
       date -U
+
+Admonitions
+===========
+
+Sphinx supports many different types of admonitions:
 
 .. admonition:: Many types of admonitions
    :class: note
@@ -99,6 +112,8 @@ restart the animation:
 
    seealso
 
+Delayed animations
+==================
 
 This animation only starts once the user scrolls down far enough in the browser
 window to see it. It will also display a restart option once it completes.
@@ -106,10 +121,26 @@ window to see it. It will also display a restart option once it completes.
 .. raw:: html
     :file: _static/html/installation.html
 
+Rendered OpenAPI
+================
+
+Render an OpenAPI document using the `sphinxcontrib-openapi` extension. 
+
+.. openapi:: _static/specs/openapi.yml
+    :examples:
+
+Autodoc classes
+===============
+
+Create automatic documentation of classes based on docstrings and type hints. 
+
+.. autoclass:: termynal_sphinx.Person
+    :members:
+    :member-order: bysource
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
    :hidden:
 
-   api
-   GitHub Repository <https://github.com/pradyunsg/furo>
+   GitHub Repository <https://github.com/konkolorado/termynal-sphinx>
