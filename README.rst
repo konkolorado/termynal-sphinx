@@ -14,8 +14,8 @@ Then build the documentation using the make target:
 
 ``make docs``
 
-The documentation will be built in `docs/built/html/`. You can open the
-`index.html` for for a rendering of what the site's landing page will look like. 
+The documentation will be built in ``docs/built/html/``. You can open the
+``index.html`` for for a rendering of what the site's landing page will look like. 
 
 Examples
 ^^^^^^^^
