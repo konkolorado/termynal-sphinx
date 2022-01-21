@@ -32,6 +32,7 @@ extensions = [
     "sphinx_copybutton",
     "sphinxcontrib.openapi",
     "sphinx_inline_tabs",
+    "sphinx_simpleopenapi",
 ]
 autodoc_typehints = "description"
 
@@ -42,7 +43,7 @@ templates_path = ["_templates"]
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
-
+openapi_default_renderer = "httpdomain"
 
 # -- Options for HTML output -------------------------------------------------
 

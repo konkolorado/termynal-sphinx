@@ -197,12 +197,34 @@ paths:
 
   /{action_id}/release:
     parameters:
+      - name: pagination_token2
+        required: false
+        in: query
+        description: >-
+          An opaque token used to iterate through pages of returned 
+          Actions. If provided, all other query arguments will be ignored. 
+          The pagination_token encodes all state in a given query, therefore
+          it's unecessary to provide query arguments once an initial token has
+          been received.
+        schema:
+          type: string
       - name: action_id
         required: true
         in: path
         description: |
           The ID for the Action that will be removed from the Action Provider's
           execution history.
+        schema:
+          type: string
+      - name: pagination_token
+        required: false
+        in: query
+        description: >-
+          An opaque token used to iterate through pages of returned 
+          Actions. If provided, all other query arguments will be ignored. 
+          The pagination_token encodes all state in a given query, therefore
+          it's unecessary to provide query arguments once an initial token has
+          been received.
         schema:
           type: string
     post:

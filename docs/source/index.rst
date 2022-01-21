@@ -127,7 +127,6 @@ Rendered OpenAPI
 Render an OpenAPI document using the `sphinxcontrib-openapi` extension. 
 
 .. openapi:: _static/specs/openapi.yml
-    :examples:
 
 Autodoc classes
 ===============
@@ -137,6 +136,13 @@ Create automatic documentation of classes based on docstrings and type hints.
 .. autoclass:: termynal_sphinx.Person
     :members:
     :member-order: bysource
+
+Custom directives
+=================
+
+This section uses a custom directive to render an OpenAPI spec.
+
+.. simpleopenapi:: _static/specs/openapi.yml
 
 .. toctree::
    :maxdepth: 2

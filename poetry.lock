@@ -481,6 +481,26 @@ doc = ["sphinx (>=3)", "myst-parser", "furo"]
 test = ["pytest", "pytest-cov", "pytest-xdist"]
 
 [[package]]
+name = "sphinx-simpleopenapi"
+version = "0.1.0"
+description = ""
+category = "dev"
+optional = false
+python-versions = "^3.9"
+develop = false
+
+[package.dependencies]
+PyYAML = "^6.0"
+Sphinx = "^4.4.0"
+sphinxcontrib-httpdomain = "^1.8.0"
+
+[package.source]
+type = "git"
+url = "https://github.com/konkolorado/sphinx-simpleopenapi.git"
+reference = "main"
+resolved_reference = "03374c129c3875e3c14153eb39c157a794e9bfff"
+
+[[package]]
 name = "sphinxcontrib-applehelp"
 version = "1.0.2"
 description = "sphinxcontrib-applehelp is a sphinx extension which outputs Apple help books"
@@ -638,7 +658,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "c5a38f5ba313334ee880a0df2ae7e56e5be86d95f48bf0f29174cb80b768104f"
+content-hash = "19def77da2d330b662fa8bebddbb6f0ba58041870dc311c8124a762cf4ae4543"
 
 [metadata.files]
 alabaster = [
@@ -981,6 +1001,7 @@ sphinx-inline-tabs = [
     {file = "sphinx_inline_tabs-2020.10.19b4-py3-none-any.whl", hash = "sha256:73af2770e9b5390df4f01fac74a25f46e066e7a214d5c919d16e34a7751566e3"},
     {file = "sphinx_inline_tabs-2020.10.19b4.tar.gz", hash = "sha256:d1e0d18af2011820e4c49429bcf1d2b392a1262fb01ebb8520e3b45ab2db57e4"},
 ]
+sphinx-simpleopenapi = []
 sphinxcontrib-applehelp = [
     {file = "sphinxcontrib-applehelp-1.0.2.tar.gz", hash = "sha256:a072735ec80e7675e3f432fcae8610ecf509c5f1869d17e2eecff44389cdbc58"},
     {file = "sphinxcontrib_applehelp-1.0.2-py2.py3-none-any.whl", hash = "sha256:806111e5e962be97c29ec4c1e7fe277bfd19e9652fb1a4392105b43e01af885a"},
